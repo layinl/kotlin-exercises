@@ -12,7 +12,7 @@ fun main() {
   println("$years anos")
 }
 
-data class Pais(var inhabitants: Double, val growthRate: Double) {
+data class Country(var inhabitants: Double, val growthRate: Double) {
   fun increaseYearlyPopulation() {
     inhabitants *= 1 + growthRate
   }
