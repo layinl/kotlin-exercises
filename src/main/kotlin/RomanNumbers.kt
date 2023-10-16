@@ -1,4 +1,9 @@
+/**
+ *  Gets the number input and prints its equivalent roman numeral.
+ *  Not final version. It needs some testing. 
+ */
 fun main() {
+  // TODO: Create some tests to validate
   val romanNum: String? = readLine()
   val romanNums = mapOf(
     'I' to 1,
