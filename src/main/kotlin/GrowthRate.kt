@@ -1,6 +1,6 @@
 fun main() {
-  val countryA = Pais(readLine()!!.toDouble(), growthRate = 0.03)
-  val countryB = Pais(readLine()!!.toDouble(), growthRate = 0.015)
+  val countryA = Country(readLine()!!.toDouble(), growthRate = 0.03)
+  val countryB = Country(readLine()!!.toDouble(), growthRate = 0.015)
 
   var years = 0
   while (countryA.inhabitants < countryB.inhabitants) {
@@ -9,7 +9,7 @@ fun main() {
     years++
   }
 
-  println("$years anos")
+  println("$years years")
 }
 
 data class Country(var inhabitants: Double, val growthRate: Double) {
