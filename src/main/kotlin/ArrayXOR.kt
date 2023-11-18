@@ -13,7 +13,7 @@ import kotlin.ranges.*
 
 fun getOriginalArray(pref: Array<Int>): Array<Int> {
   // Write your code here
-  var arr: Array<Int> = pref
+  val arr: Array<Int> = pref
   for(num in 1 until pref.size) {
     val res = arr[num-1] xor arr[num]
     arr[num] = res
@@ -22,16 +22,16 @@ fun getOriginalArray(pref: Array<Int>): Array<Int> {
 }
 
 fun main(args: Array<String>) {
-//     val prefCount = readLine()!!.trim().toInt()
+  val prefCount = readLine()!!.trim().toInt()
 
-//     val pref = Array<Int>(prefCount, { 0 })
-//     for (i in 0 until prefCount) {
-//         val prefItem = readLine()!!.trim().toInt()
-//         pref[i] = prefItem
-//     }
-  val pref = intArrayOf(2, 2, 5, 6)
+  val pref = Array(prefCount) { 0 }
+  for (i in 0 until prefCount) {
+         val prefItem = readLine()!!.trim().toInt()
+         pref[i] = prefItem
+     }
+  //val pref = intArrayOf(2, 2, 5, 6)
 
-  val result = getOriginalArray(pref.toTypedArray())
+  val result = getOriginalArray(pref)
 
   println(result.joinToString("\n"))
 }
