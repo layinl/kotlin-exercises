@@ -21,6 +21,9 @@ fun getOriginalArray(pref: Array<Int>): Array<Int> {
   return arr
 }
 
+/**
+ * What the hell this code does again?
+ */
 fun main(args: Array<String>) {
   val prefCount = readLine()!!.trim().toInt()
 
