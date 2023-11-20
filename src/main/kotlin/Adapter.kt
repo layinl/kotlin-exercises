@@ -1,5 +1,6 @@
 /**
- * This conversion class only supports USD-GBP conversion
+ * This conversion class only supports US Dollar to Pound Sterling
+ * conversion
  */
 class OldCurrencyConverter {
 
@@ -8,6 +9,7 @@ class OldCurrencyConverter {
    *
    * 1 USD = 0.8 GBP
    * @param amount the amount of dollars to be converted
+   * @return the proportional value in GBP
    */
   fun convertUSDtoGBP(amount: Double): Double {
     return amount * 0.80
@@ -16,7 +18,8 @@ class OldCurrencyConverter {
 }
 
 /**
- * This class adapts the [OldCurrencyConverter] to apply the additional interest of GBP-EUR conversion
+ * This class adapts the [OldCurrencyConverter] to apply the additional
+ * interest of Pound Sterling-Euro conversion
  * @see OldCurrencyConverter
  */
 class CurrencyAdapter(private val oldConverter: OldCurrencyConverter) {
@@ -24,8 +27,9 @@ class CurrencyAdapter(private val oldConverter: OldCurrencyConverter) {
   /**
    * Converts USD to EUR using the [OldCurrencyConverter.convertUSDtoGBP] method
    *
-   * 10000 USD = 10625 EUR
+   * _10000 USD = 10625 EUR_
    * @param amount the amount of dollars to be converted
+   * @return the proportional value in Euro
    * @see OldCurrencyConverter.convertUSDtoGBP
    */
   fun convertUSDtoEUR(amount: Double): Double {
