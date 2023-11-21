@@ -1,6 +1,8 @@
 /**
  * This conversion class only supports US Dollar to Pound Sterling
  * conversion
+ *
+ * **Note**: The rate is not up-to-date
  */
 class OldCurrencyConverter {
 
@@ -20,16 +22,19 @@ class OldCurrencyConverter {
 /**
  * This class adapts the [OldCurrencyConverter] to apply the additional
  * interest of Pound Sterling-Euro conversion
+ *
+ * **Note**: The rate is not up-to-date
  * @see OldCurrencyConverter
  */
 class CurrencyAdapter(private val oldConverter: OldCurrencyConverter) {
 
   /**
-   * Converts USD to EUR using the [OldCurrencyConverter.convertUSDtoGBP] method
+   * Converts USD to EUR using the [OldCurrencyConverter.convertUSDtoGBP]
+   * method
    *
-   * _10000 USD = 10625 EUR_
+   * _10000 USD = 8500 EUR_
    * @param amount the amount of dollars to be converted
-   * @return the proportional value in Euro
+   * @return the proportional value in Euro deducted by the exchange interest
    * @see OldCurrencyConverter.convertUSDtoGBP
    */
   fun convertUSDtoEUR(amount: Double): Double {
@@ -41,5 +46,5 @@ class CurrencyAdapter(private val oldConverter: OldCurrencyConverter) {
 fun main() {
   println("Please input the amount of USD to convert to EUR")
   val input = readLine()?.toDoubleOrNull() ?: return
-  println("USD: $input \n EUR: ${CurrencyAdapter(OldCurrencyConverter()).convertUSDtoEUR(input)}")
+  println("USD: $input\nEUR: ${CurrencyAdapter(OldCurrencyConverter()).convertUSDtoEUR(input)}")
 }
