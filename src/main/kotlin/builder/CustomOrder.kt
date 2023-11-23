@@ -1,12 +1,4 @@
-/**
- * The Product class represents each order's item
- * @see CustomOrder
- * @property name The product's name or title
- * @property price The product's full price
- * @property quantity How many of this product will be in the order
- * @constructor Creates a product
- */
-class Product(val name: String, val price: Double, val quantity: Int)
+package builder
 
 /**
  * The CustomOrder class manages the customer's order
@@ -90,27 +82,4 @@ class CustomOrder private constructor(
       "Address: ${this.deliveryAddress}"
     )
   }
-}
-
-fun main() {
-  println("Plaese input the client's name")
-  val customerName = readLine() ?: ""
-  val orderBuilder = CustomOrder.Builder().setCustomerName(customerName)
-
-  println("How many products will it be?")
-  val numProducts = readLine()?.toIntOrNull() ?: 0
-  for (i in 1..numProducts) {
-    println("Plaese input the item's name")
-    val productName = readLine() ?: ""
-    println("Plaese input the item's price")
-    val productPrice = readLine()?.toDoubleOrNull() ?: 0.0
-    println("Plaese input the item's quantity")
-    val productQuantity = readLine()?.toIntOrNull() ?: 0
-    orderBuilder.addProduct(Product(productName, productPrice, productQuantity))
-  }
-
-  println("What is the delivery address?")
-  val deliveryAddress = readLine() ?: ""
-  val customOrder = orderBuilder.setDeliveryAddress(deliveryAddress).build()
-  customOrder.printReceipt()
 }
