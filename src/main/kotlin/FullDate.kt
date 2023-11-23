@@ -1,4 +1,5 @@
 fun main() {
+  println("Please input a date (mm/dd/yyyy)")
   val date: String? = readLine()
   val (month, day, year) = date!!.split("/")
 

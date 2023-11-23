@@ -1,11 +1,12 @@
 fun main() {
+  println("Insira uma data (dd/mm/aaaa)")
   val date: String? = readLine()
   val (day, month, year) = date!!.split("/")
 
   val fullMonth = when (month.toInt()){
     1 -> "Janeiro"
     2 -> "Fevereiro"
-    3 -> "Marco"
+    3 -> "Março"
     4 -> "Abril"
     5 -> "Maio"
     6 -> "Junho"
@@ -15,7 +16,7 @@ fun main() {
     10 -> "Outubro"
     11 -> "Novembro"
     12 -> "Dezembro"
-    else -> "Mes invalido"
+    else -> "Mês inválido"
   }
 
   println("$day de $fullMonth de $year")
