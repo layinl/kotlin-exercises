@@ -1,3 +1,10 @@
+/**
+ * O programa Full Date (Data por Extenso) recebe uma data e a imprime por
+ * extenso.
+ *
+ * Exemplo: 08/12/2003 08 de Dezembro de 2003
+ *
+ */
 fun main() {
   println("Insira uma data (dd/mm/aaaa)")
   val date: String? = readLine()

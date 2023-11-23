@@ -1,3 +1,9 @@
+/**
+ * The Full Date program gets the date and prints its full date.
+ *
+ * e.g. 11/24/1947 -> **November 24th, 1947**
+ *
+ */
 fun main() {
   println("Please input a date (mm/dd/yyyy)")
   val date: String? = readLine()
