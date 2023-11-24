@@ -4,7 +4,7 @@ package builder
  * The
  */
 fun main() {
-  println("Plaese input the client's name")
+  println("Please input the client's name")
   val customerName = readLine() ?: ""
   val orderBuilder = CustomOrder.Builder().setCustomerName(customerName)
 
