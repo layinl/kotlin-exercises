@@ -1,5 +1,9 @@
 import java.util.*
 
+/**
+ * This program receives a book and its author and outputs it as a slug,
+ * a machine and human legible text format.
+ */
 fun main() {
   println("Please input the book title")
   val title = readLine() ?: ""
