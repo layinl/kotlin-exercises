@@ -1,5 +1,8 @@
 /**
- * Basic file made to learn about Multithreading
+ * This program receives URLs via user input and simulates its
+ * downloading, printing the total time elapsed in the end.
+ *
+ * This program was made to learn about Multithreading
  */
 fun main() {
   val urls = mutableListOf<String>()
@@ -33,6 +36,11 @@ fun main() {
   )
 }
 
+/**
+ * Receives a URL and returns a simulated time elapsed to open/download
+ * @param url the URL to be calculated
+ * @return the time for the URL (URL's length for now)
+ */
 fun openLink(url: String): Int {
   return url.length
 }
