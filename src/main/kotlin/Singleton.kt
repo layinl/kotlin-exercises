@@ -32,8 +32,10 @@ object UserManager {
 }
 
 fun main() {
+  println("How many users will you add?")
   val quantity = readLine()?.toIntOrNull() ?: 0
   for (i in 1..quantity) {
+    println(if (i == 1) "Please insert a user" else "Please insert another user")
     val name = readLine() ?: ""
     UserManager.addUser(name)
   }
