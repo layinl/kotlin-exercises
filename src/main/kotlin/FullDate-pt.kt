@@ -2,7 +2,7 @@
  * O programa Full Date (Data por Extenso) recebe uma data e a imprime por
  * extenso.
  *
- * Exemplo: 08/12/2003 08 de Dezembro de 2003
+ * Exemplo: 08/12/2003 -> 08 de Dezembro de 2003
  *
  */
 fun main() {
